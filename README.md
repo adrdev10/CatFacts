@@ -1,6 +1,6 @@
 # MeowFacts
 
-A flutter mobile application that collects facts about cats and display them in a complex UI.
+A flutter mobile application that collects facts about cats and display them in the UI.
 <div><img style="display: block;" src="https://j.gifs.com/JygYE2.gif" width="250" height="450"/></div>
 
 # APIs

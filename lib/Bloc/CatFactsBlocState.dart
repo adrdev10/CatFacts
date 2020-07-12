@@ -14,7 +14,6 @@ class CatFactsBlocState {
     catFacts = null;
   }
 }
-  
 
 class CatFactsBloc {
   final _apiClient = CatFactsClient();
@@ -33,20 +32,20 @@ class CatFactsBloc {
     return catFactsState;
   }
 
-  fetchCatFacts(String endpoint) {
+  fetchCatFacts(String endpoint) async {
     fetchCatFactsSubscription?.cancel();
     catFactsState.loading = true;
     catFactsController.add(catFactsState);
-    _apiClient.requestCatFacts(endpoint)
-      .asStream()
-      .listen((event) { 
-        if (event is CatFacts) {
-          catFactsState.catFacts = event;
-          catFactsState.loading = false;
-          catFactsController.add(catFactsState);
-        }else {
-          throw new Exception("Error while handling fetching cat facts");
-        }
-      });
+    _apiClient.requestCatFacts(endpoint).asStream().listen((dynamic event) {
+      if (event is CatFacts) {
+        catFactsState.catFacts = event;
+      }
+      catFactsState.loading = false;
+      catFactsController.add(catFactsState);
+    });
+  }
+
+  tranlateFacts({bool isLoading, String from, String to}) {
+    if (!isLoading) {}
   }
 }

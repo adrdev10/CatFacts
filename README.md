@@ -2,7 +2,7 @@
 
 A flutter mobile application that collects facts about cats and display them in a complex UI.
 
-![Alt Text](https://gifs.com/gif/meowfacts-JygYE2)
+![Alt Text](https://j.gifs.com/JygYE2.gif)
 
 # APIs
 - cat facts API(https://alexwohlbruck.github.io/cat-facts/docs/)
